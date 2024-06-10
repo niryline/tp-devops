@@ -1,4 +1,4 @@
-name: CI devops 2024
+name: Deploy
 on:
   workflow_run:
     workflows: ["CI devops 2024"]
