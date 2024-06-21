@@ -45,3 +45,11 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USR}}/tp1-apache:4.0
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
+
+      - name: Build image and push front
+        uses: docker/build-push-action@v3
+        with:
+          context: ./front
+          tags: ${{secrets.DOCKERHUB_USR}}/tp1-front:4.0
+          # build on feature branches, push only on main branch
+          push: ${{ github.ref == 'refs/heads/main' }}
