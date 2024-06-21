@@ -1,0 +1,11 @@
+---
+# tasks file for roles/proxy
+- name: Run Proxy
+  docker_container:
+    name: tp1-apache
+    image: niryantso/tp1-apache:4.0
+    state: started
+    networks:
+      - name: "app-network"
+    ports:
+      - "80:80"

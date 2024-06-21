@@ -1,0 +1,9 @@
+---
+# tasks file for roles/app
+  - name: Launch App
+    docker_container:
+      name: tp1-bck
+      state: started
+      image: niryantso/tp1-bck:4.0
+      networks:
+        - name: "app-network"

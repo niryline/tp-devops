@@ -16,19 +16,27 @@ services:
       - ./postgres/data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USR}
-      POSTGRES_PASSWORD: ${POSTGRES_PWD}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
   apache: 
     build: ./http-server
     ports:
-      - "9999:80"
+      - "80:80"
     networks:
       - app-network
     depends_on:
       - bck
 
+  front:
+    build: ./front
+    depends_on:
+      - apache
+    networks:
+      - app-network
+
 networks:
   app-network:
     name: app-network
     external: true
+
