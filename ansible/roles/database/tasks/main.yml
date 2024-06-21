@@ -3,7 +3,7 @@
   - name: Launch Database
     docker_container:
       name: tp1-postgres-server
-      image: niryantso/tp1-postgres-server:4.0
+      image: niryantso/tp1-postgres-server:5.0
       state: started
       networks:
         - name: "app-network"

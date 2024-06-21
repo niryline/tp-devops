@@ -3,7 +3,7 @@
 - name: Run Front
   docker_container:
     name: tp1-front
-    image: niryantso/tp1-front:4.0
+    image: niryantso/tp1-front:5.0
     state: started
     networks:
       - name: "app-network"

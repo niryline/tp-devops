@@ -4,6 +4,6 @@
     docker_container:
       name: tp1-bck
       state: started
-      image: niryantso/tp1-bck:4.0
+      image: niryantso/tp1-bck:5.0
       networks:
         - name: "app-network"

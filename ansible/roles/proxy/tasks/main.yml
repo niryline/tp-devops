@@ -3,7 +3,7 @@
 - name: Run Proxy
   docker_container:
     name: tp1-apache
-    image: niryantso/tp1-apache:4.0
+    image: niryantso/tp1-apache:5.0
     state: started
     networks:
       - name: "app-network"
